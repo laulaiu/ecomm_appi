@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <!--CSS-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../css/sm-core-css.css" rel="stylesheet" type="text / css" />
+
+
+
+
+    <!--Script-->
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="~/js/JavaScript.js"></script>
+
+    <link href="~/css/menu_rodape.css" rel="stylesheet" type="text/css" />
+
+
+    <!--teste-->
+
+
+
+
+</head>
+<body>
+
+
+    <div class="menu_container theme" id="menu_principal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 text-center"><a class=" btn theme_btn" id="home">Home</a></div>
+
+                <div class="col-lg-2 dropdown text-center">
+                    <a type="button" href="#" class="dropdown-toggle btn theme_btn" data-toggle="dropdown" id="categoria">Categoria</a>
+                    <div class="dropdown-menu">
+
+                        <a id="categoria_link1" class="dropdown-item href="#">Link 1</a>
+                        <a id="categoria_link2" class="dropdown-item" href="#">Link 2</a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 text-center"><a class=" btn theme_btn" id="carrinho">Carrinho</a></div>
+                <div class="col-lg-2 text-center"><a href="~/controle_web/Login"  class=" btn theme_btn" id="login">Login</a></div>
+                <div class="col-lg-2 text-center"><a href="~/controle_web/Cadastro" class=" btn theme_btn" id="cadastro">Cadastro</a></div>
+                <div class="col-lg-1 btn " id="perfil"> <img src="~/Imagem/perfil_icon.png" /></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content body_container" id="pagindex" style="">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <footer class="rodape_container theme" id="rodape_principal">
+        <div class="container">
+            <div class="row" id="rodape_linha2">
+
+                <div id="logo" class=" text-center col-lg-4"> <img src="~/Imagem/mercado_libre.png" /> </div>
+
+                <div class="col-lg-2  rodape_texto">
+                    <ul class="text-center">
+                        <li class="titulo_rodape">Inicio</li>
+                        <li class="btn-lg"><a>Pagina incial</a></li>
+                        <li class="btn-lg"><a>Categoria</a></li>
+                        <li class="btn-lg"><a>Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 rodape_texto">
+                    <ul class="text-center">
+                        <li class="titulo_rodape">Sobre nos</li>
+                        <li class="btn-lg"><a>Empresa</a></li>
+                        <li class="btn-lg"><a>Contato</a></li>
+                        <li class="btn-lg"><a>Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 rodape_texto">
+                    <ul class="text-center">
+                        <li class="titulo_rodape">Suporte</li>
+                        <li class="btn-lg"><a>FAQ</a></li>
+                        <li class="btn-lg"><a>Telefone</a></li>
+                        <li class="btn-lg"><a>Chat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+
+
+        </div>
+    </footer>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

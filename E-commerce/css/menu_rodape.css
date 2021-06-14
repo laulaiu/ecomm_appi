@@ -1,0 +1,188 @@
+﻿
+.theme{
+    background-color:royalblue;
+}
+
+.theme_btn{
+    background-color:ghostwhite;
+    color:black;
+}
+
+.body_container {
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+
+
+
+
+/*desktop*/
+@media screen and (min-width:992px) {
+
+    body {
+        background-color: aliceblue;
+    }
+
+    .menu_container .container .row div a {
+        width: 90%;
+        font-size: 1.5em;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+
+    .menu_container .container .row div {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding: 0px;
+        
+    }
+
+    #home {
+        margin-left: 3px;
+    }
+
+    #categoria{
+        margin-left:0px;
+        width:100%
+    }
+
+    #logo{
+        margin-bottom:10px;
+        margin-top:30px;
+
+    }
+
+    #logo img {
+        margin-bottom: 10px;
+        margin-top: 5px;
+        width: 100%;
+        height: auto;
+    }
+
+    #perfil {
+        background-color: transparent;
+        margin-left:10px;
+        margin-top:15px;
+    }
+
+    .menu_container {
+        width: 95%;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .rodape_container {
+        width: 95%;
+        margin: auto;
+        border-radius: 10px;
+        
+    }
+
+    .border{
+        border-color:red;
+    }
+
+    #rodape_linha2 a {
+        color: white;
+    }
+    
+    .rodape_container li {
+        list-style: none;
+        font-size: 1.4em;
+        font-family: 'Times New Roman';
+    }
+
+    #rodape_linha2 .titulo_rodape {
+        font-size: 2.2em;
+     
+    }
+
+    .rodape_texto {
+        margin-top:30px;
+    }
+
+}
+
+    /*------------------Celular--------------------*/
+    @media screen and (max-width:991px) {
+        body {
+            background-color: darkgray;
+            
+        }
+
+        #logo {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            width: 80%;
+            height: auto;
+        }
+
+        #logo img {
+            
+            width: 80%;
+            height: auto;
+        }
+
+        .menu_container .container .row div a {
+            width: 65%;
+            font-size: 1.8em;
+        }
+
+        .menu_container .container .row div {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding: 0px;
+            
+        }
+
+
+
+        .menu_container{
+            width:80%;
+            margin:auto;
+            border-radius:10px;
+        }
+
+        .rodape_container {
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+ 
+        }
+
+        #rodape_linha2 a {
+            color: white;
+        }
+
+        #rodape_linha2 ul {
+            padding-left: 0;
+            font-size: 2.8em;
+        }
+
+        .rodape_container li {
+            list-style: none;
+            font-family: 'Times New Roman';
+            font-size: 1em;
+        }
+
+        #rodape_linha2 .titulo_rodape {
+            font-size: 1.4em;
+        }
+
+    }
+
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0px;
+        
+    }
+
+
+    
+
+
+
+

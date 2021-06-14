@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<link href="~/css/login.css"/>
+
+<h2>Login</h2>
+
+
+<div class="container col-lg-6" >
+    <form class="" >
+                
+        <div class="row ">
+            <label class="col-sm-6">Acesse com seu e-email</label>
+        </div>
+
+        <div class="row">
+            <label class="col-sm-2"> E-mail:</label>
+            <a class="col-sm-4" href="">Esqueci meu e-mail</a>
+        </div>
+
+        <!--Entrada-->
+        <input class="entrada" type="email" required placeholder="Digite seu e-mail">
+
+        
+        <div class="row">
+            <label class="">Já possui um cadastro ?</label>
+        </div>
+
+        <!--radio button-->
+        <div class="row">
+            <div>
+                <input type="radio" name="grupo1" id="radio1" onclick="mostrar()">
+                <label for="group1">Sim</label>
+            </div>
+            <div>
+                <input type="radio" name="grupo1" id="radio2" onclick="ocultar()">
+                <label for="group1">Não, essa é minha primeira compra</label>
+            </div>
+        </div>
+
+        <div style="height: 40px;" class="espacador"></div>
+
+        <div id="ocultar1">
+            <div class="divSubtitulo">
+                <label>Senha:</label>
+                <a href="">Esqueci minha senha</a>
+            </div>
+
+
+            <!--Entrada-->
+            <div>
+                <input maxlength="16" minlength="8" id="senha_usuario" required style="margin-bottom: 20px" class="entrada" type="password" placeholder="Minimo 8 ">
+            </div>
+        </div>
+
+        <div class="botao">
+            <!--<button type="submit" id="btn_enviar" disabled><a style="text-decoration: none; color: white;" href="cadastro.html">Continuar</a></button> -->
+            <a href=""><button class="btn_enviar" onclick="verificaRadio()">Continuar</button></a>
+        </div>
+
+
+
+    </form>
+</div>
+
