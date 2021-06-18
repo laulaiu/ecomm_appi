@@ -1,6 +1,98 @@
-﻿body {
+﻿
+/*desktop*/
+@media screen and (min-width:992px) {
+
+
+    .container_login {
+        background-color: dodgerblue;
+        width: 60%;
+        margin: auto;
+    }
+
+    .container_login .row {
+        margin-left: 30%;
+        margin-bottom: 5px;
+    }
+
+    .limite_resposivo_input_email {
+        width: 60%;
+        min-width: 210px;
+    }
+
+    .limite_resposivo_input_senha {
+        width: 50%;
+        min-width: 170px;
+    }
 }
 
-.centralizar{
-    margin:auto;
+/*------------------Celular--------------------*/
+@media screen and (max-width:991px) {
+
+    .container_login {
+        background-color: dodgerblue;
+        width: 80%;
+    }
+
+    .container_login .row {
+        margin-left: 25%;
+        margin-bottom: 5px;
+    }
+
+    .limite_resposivo_input_email {
+        width: 65%;
+        min-width:135px
+    }
+    .limite_resposivo_input_senha {
+        width: 45%;
+        min-width:135px
+        
+    }
+    
+}
+
+.min-width{
+    min-width:175px;
+        
+}
+
+body {
+    background-color: lightgrey;
+    font-family: 'Times New Roman'
+}
+
+.container_login .margin_bottom {
+    margin-bottom: 30px;
+    margin_top: 10px;
+}
+
+
+.btn_enviar_form {    
+    margin-bottom: 30px;
+}   
+
+.centralizar {
+    margin: auto;
+}
+
+.form_margin{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.btn_enviar_form {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.container_login {
+    font-size: 16px;
+    border-radius: 20px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.link {
+    color: darkred;
+    font-size: 12px;
+    font-family: 'Times New Roman'
 }
