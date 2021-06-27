@@ -13,7 +13,7 @@
     <RootNamespace>E_commerce</RootNamespace>
     <AssemblyName>E-commerce</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44376</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
     <PublishDatabases>true</PublishDatabases>
     <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -106,15 +110,19 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="css\index.css" />
     <Content Include="css\menu_rodape.css" />
     <Content Include="css\login.css" />
+    <Content Include="css\cadastro.css" />
+    <Content Include="css\produto.css" />
     <Content Include="Global.asax" />
     <Content Include="Imagem\Carrosel\carrosel_01.jpg" />
     <Content Include="Imagem\Carrosel\carrosel_02.jpg" />
     <Content Include="Imagem\Carrosel\carrosel_03.jpg" />
-    <Content Include="Imagem\mercado_libre.png" />
+    <Content Include="Imagem\Index\imagem_index-01.png" />
+    <Content Include="Imagem\mercado_libre_logo.png" />
     <Content Include="Imagem\perfil_icon.png" />
-    <Content Include="Imagem\produtos\acessorios_celular\capinha.jpeg" />
+    <Content Include="Imagem\produtos\acessorios_celular\capinha01.jpeg" />
     <Content Include="Imagem\produtos\acessorios_celular\capinha02.jpeg" />
     <Content Include="Imagem\produtos\acessorios_celular\capinhabraco.jpeg" />
     <Content Include="Imagem\produtos\acessorios_celular\carregador.jpeg" />
@@ -126,7 +134,8 @@
     <Content Include="Imagem\produtos\acessorios_celular\suporte02.jpeg" />
     <Content Include="Imagem\produtos\acessorios_celular\suporte03.jpeg" />
     <Content Include="Imagem\produtos\acessorios_celular\tripe.jpeg" />
-    <Content Include="Imagem\produtos\foto02.jpg" />
+    <Content Include="Imagem\Index\imagem_index-02.jpeg" />
+    <Content Include="Imagem\produtos\evoluçao.jpg" />
     <Content Include="Imagem\produtos\meias_e_sapatos\meia01.jpg" />
     <Content Include="Imagem\produtos\meias_e_sapatos\meia02.jpg" />
     <Content Include="Imagem\produtos\meias_e_sapatos\meia_mergulho.jpg" />
@@ -139,7 +148,6 @@
     <Content Include="Imagem\produtos\meias_e_sapatos\sapato07.jpg" />
     <Content Include="Imagem\produtos\meias_e_sapatos\sapatomeia.jpg" />
     <Content Include="Imagem\produtos\meias_e_sapatos\sapato_fogo.jpg" />
-    <Content Include="Imagem\produtos\pagcadastro.jpg" />
     <Content Include="Imagem\produtos\pagina_principal\blusao.jpeg" />
     <Content Include="Imagem\produtos\pagina_principal\blusaopreto.jpeg" />
     <Content Include="Imagem\produtos\pagina_principal\camisa01.jpeg" />
@@ -152,6 +160,8 @@
     <Content Include="Imagem\produtos\pagina_principal\mascaradescartavel.jpeg" />
     <Content Include="Imagem\produtos\pagina_principal\roupacachorro.jpeg" />
     <Content Include="Imagem\produtos\pagina_principal\roupacachorro02.jpeg" />
+    <Content Include="Imagem\produtos\vendas.jpg" />
+    <Content Include="Imagem\vendas_produtos.jpg" />
     <Content Include="js\login.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -159,10 +169,9 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Videos\Oferta.mp4" />
-    <Content Include="Videos\Oferta.ogg" />
+    <Content Include="Imagem\Index\Videos\Oferta.mp4" />
+    <Content Include="Imagem\Index\Videos\Oferta.ogg" />
     <Content Include="Views\controle_web\Login.cshtml" />
-    <None Include="Views\controle_web\Login_teste.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +210,9 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Views\controle_web\Cadastro.cshtml" />
+    <Content Include="Views\controle_web\Produto_categoria1.cshtml" />
+    <Content Include="Views\controle_web\Produto_categoria2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -211,6 +223,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -223,15 +236,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51673</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44376/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>https://localhost:44376/</CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

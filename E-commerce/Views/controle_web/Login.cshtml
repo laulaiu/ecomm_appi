@@ -5,65 +5,69 @@
 
 
 
-<h2>Login</h2>
 
+<div class="container container_login">
+    <form class="form_margin">
 
-<div class="container container_login" >
-    <form class="form_margin" >
-                
         <div class="row margin_bottom">
-            <label class="col-sm-8">Acesse com seu e-email</label>
+            <label class="col-sm-8">Acesse com seu e-mail e senha</label>
         </div>
 
         <div class="margin_bottom">
-
             <!--Entrada email-->
             <div class="row">
-                <input class="col-lg-8 limite_resposivo_input_email" type="email" required placeholder="Digite seu e-mail">
-            </div>
-            <div class="row">
-                <a class="col-lg-10 link" href="">Esqueci meu e-mail</a>
-            </div>
-
-        </div>
-        
-        <div class="margin_bottom">
-            <div class="row">
-                <label class="col-lg-10">Já possui um cadastro ?</label>
-            </div>
-
-            <!--radio button-->
-            <div class="row">
-                <div class="min-width ">
-                    <input type="radio" name="grupo1" id="radio1" onclick="mostrar()">
-                    <label for="group1">Sim</label>
-                </div>
-                <div class="min-width">
-                    <input type="radio" name="grupo1" id="radio2" onclick="ocultar()">
-                    <label for="group1">Minha primeira vez</label>
-                </div>
+                <input class=" limite_resposivo_input_email" type="email" required placeholder="Digite seu e-mail">
             </div>
         </div>
 
-        <div class="margin_bottom">
+
+        <div class="margin_bottom " id="ocultar">
 
             <div id="row senha">
                 <!--Entrada senha-->
                 <div class="row">
-                    <input class=" col-lg-8 limite_resposivo_input_senha" maxlength="16" minlength="8" id="senha_usuario" required  type="password" placeholder="Digite sua senha ">
+                    <input class="  limite_resposivo_input_senha" maxlength="16" minlength="8" id="senha_usuario" required type="password" placeholder="Digite sua senha ">
                 </div>
 
                 <div class="row">
                     <a class=" col-lg-10 link" href="">Esqueci minha senha</a>
                 </div>
             </div>
-
         </div>
 
-        <div class="row  ">            
-            <a href=""><button class=" col-lg-8 btn btn-primary btn_enviar_form" onclick="verificaRadio()">Continuar</button></a>
+
+
+
+        <div class="margin_bottom">
+            <div class="row">
+                <label class="col-lg-10">Já possui um cadastro ?</label>
+            </div>
+
+
+            <!--radio button-->
+            <div class="row">
+                <div class="min-width ">
+                    <input type="radio" name="grupo1" id="radio1" onclick="mostrar_login()" checked>
+                    <label for="group1">Sim</label>
+                </div>
+                <div class="min-width">
+                    <input type="radio" name="grupo1" id="radio2" onclick="ocultar_login()">
+                    <label for="group1">Minha primeira vez</label>
+                </div>
+            </div>
         </div>
+
+
+
+
+        <div class="row" id="div_botao_login">
+            <button class=" col-lg-4  btn-primary btn_enviar_form" onclick="verificaRadio()">Continuar</button>
+        </div>
+
+
 
     </form>
+
+
 </div>
 

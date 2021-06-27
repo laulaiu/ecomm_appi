@@ -1,0 +1,45 @@
+﻿body {
+}
+
+.imagem_produto1 {
+    width: 70%;
+    margin-bottom:50px;
+}
+
+.container_produto {
+    margin: 25px;
+    margin-top:50px;
+    margin-left:15%;
+}
+
+.produto_compra {
+    width: 90%;
+    border-radius:10px;
+}
+
+.text_desc_produto {    
+    font-size: 22px;
+    font-family: 'Times New Roman';
+   
+}
+
+@media screen and (max-width:991px) {
+    .centr_produto {
+        text-align: center;
+    }
+
+    .produto_compra {
+        width: 70%;
+        border-radius: 10px;
+    }
+
+    .container_produto {
+        
+        margin-left: 0;
+    }
+
+    .text_desc_produto {
+        width:70%;
+        margin:0 auto;
+    }
+}

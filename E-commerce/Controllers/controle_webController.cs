@@ -25,5 +25,20 @@ namespace E_commerce.Controllers
             return View();
         }
 
+        public ActionResult Produto_categoria1()
+        {
+            return View();
+        }
+
+        public ActionResult Produto_categoria2()
+        {
+            return View();
+        }
+
+        public ActionResult Carrinho()
+        {
+            return View();
+        }
+
     }
 }

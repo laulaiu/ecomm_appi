@@ -11,7 +11,11 @@
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="../css/sm-core-css.css" rel="stylesheet" type="text / css" />
+    <link href="~/css/menu_rodape.css" rel="stylesheet" type="text/css" />
     <link href="~/css/login.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/cadastro.css" rel="stylesheet" type="text/css" />
+
 
 
 
@@ -21,9 +25,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="~/js/JavaScript.js"></script>
+    <script src="~/js/login.js"></script>
 
-    <link href="~/css/menu_rodape.css" rel="stylesheet" type="text/css" />
+
+
 
 
     <!--teste-->
@@ -31,9 +36,10 @@
 
 
 
+
 </head>
 <body>
-
+    
     <div class="menu_container theme" id="menu_principal">
         <div class="container">
             <div class="row">
@@ -43,8 +49,8 @@
                     <a type="button" href="#" class="dropdown-toggle btn theme_btn" data-toggle="dropdown" id="categoria">Categoria</a>
                     <div class="dropdown-menu">
 
-                        <a id="categoria_link1" class="dropdown-item href="#">Link 1</a>
-                        <a id="categoria_link2" class="dropdown-item" href="#">Link 2</a>
+                        <a id="categoria_link1" class="dropdown-item  btn-primary" href="/controle_web/Produto_categoria1">Categoria-1</a>
+                        <a id="categoria_link2" class="dropdown-item btn btn-primary" href="~/controle_web/Produto_categoria2">Categoria-2</a>
 
                     </div>
                 </div>
@@ -57,16 +63,16 @@
         </div>
     </div>
 
-    <div class="container body-content body_container" id="pagindex" style="">
+    <div class="container body-content body_container" id="pagindex" style="margin-top:40px; margin-bottom:40px;">
         @RenderBody()
-        <hr />
+        
     </div>
 
     <footer class="rodape_container theme" id="rodape_principal">
         <div class="container">
             <div class="row" id="rodape_linha2">
 
-                <div id="logo" class=" text-center col-lg-4"> <img src="~/Imagem/mercado_libre.png" /> </div>
+                <div id="logo" class=" text-center col-lg-4"> <img src="~/Imagem/mercado_libre_logo.png" /> </div>
 
                 <div class="col-lg-2  rodape_texto">
                     <ul class="text-center">
@@ -96,9 +102,9 @@
                 </div>
             </div>
             <hr />
-            <footer>
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            </footer>
+            
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            
 
 
         </div>

@@ -1,0 +1,19 @@
+﻿body {
+}
+
+.form_cadastro{
+    margin:10%;
+    margin-left:20%;
+    font-size:14px;
+    font-family:'Times New Roman';
+}
+
+.container_cadastro {
+    background-color: dodgerblue;
+    width: 70%;
+    max-width: 500px;
+    min-width: 250px;
+    border-radius: 20px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}

@@ -95,7 +95,7 @@
     }
 
     #rodape_linha2 .titulo_rodape {
-        font-size: 2.2em;
+        font-size: 2.0em;
      
     }
 
@@ -138,7 +138,6 @@
         }
 
 
-
         .menu_container{
             width:80%;
             margin:auto;
@@ -158,17 +157,17 @@
 
         #rodape_linha2 ul {
             padding-left: 0;
-            font-size: 2.8em;
+            font-size: 1.8em;
         }
 
         .rodape_container li {
             list-style: none;
             font-family: 'Times New Roman';
-            font-size: 1em;
+            font-size: 0.7em;
         }
 
         #rodape_linha2 .titulo_rodape {
-            font-size: 1.4em;
+            font-size: 1.5em;
         }
 
     }

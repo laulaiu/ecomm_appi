@@ -1,0 +1,53 @@
+﻿
+.container_carrosel{
+    margin-top:50px;
+    margin-bottom:100px;
+
+}
+
+.texto_index{
+    font-size:16px;
+    font-family:sans-serif;
+    margin-top:30px;
+}
+
+
+/*aquiiiiiiiiiiii*/
+
+.imagem_idex_1 {
+    width: 80%;
+    height: auto;
+    margin-right: auto;
+}
+.imagem_idex_2{
+    width:80%;
+    height:auto;
+    margin-left:auto;
+}
+
+
+/*aquiiiiiiiiiiii*/
+
+
+/*desktop*/
+@media screen and (min-width:992px) {
+
+}
+
+/*Celular*/
+@media screen and (max-width:991px){
+    .imagem_idex_1 {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    .imagem_idex_2 {
+        width: 80%;
+        height: auto;
+        margin:auto;
+        margin-bottom:30px;
+        
+    }
+}
