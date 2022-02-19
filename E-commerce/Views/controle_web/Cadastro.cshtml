@@ -9,38 +9,45 @@
 
 <div class="container container_cadastro">
 
-    <form class="form_cadastro">
-        
-            <div class="row">
-                <label class="col-lg-8">Nome</label>
-                <input class="col-lg-8" type="text" id="nome_completo_cliente"/>
+    <form class="form_cadastro" method="post" action="~/controle_web/Cadastro_cliente">
 
-            </div>
-            <div class="row">
-                <label class="col-lg-8">CPF</label>
-                <input class="col-lg-8" type="text" id="cpf_cliente"/>
-            </div>
-            <div class="row">
-                <label class="col-lg-8">Telefone</label>
-                <input type="text"  class="phone col-lg-8" id="telefone_cliente" />
-            </div>
-            <div class="row">
-                <label class="col-lg-8" >CEP</label>
-                <input class="col-lg-8" id="cep_cliente"/>
-            </div>
-            <div class="row">
-                <label class="col-lg-8">Data de Nascimento</label>
-                <input class="col-lg-8" id="data_nasciment_clientes"/>
-            </div>
-            <div class="row">
-                <label class="col-lg-8">E-mail</label>
-                <input class="col-lg-8" id="email_cliente"/>
-            </div>
-            <div class="row">
-                <label class="col-lg-8">Senha</label>
-                <input class="col-lg-8" id="senha_cliente"/>
-            </div>
-        
+        <div class="row">
+            <label class="col-lg-8" for="nome_completo_cliente">Nome</label>
+            <input class="col-lg-8" type="text" name="nome_completo_cliente" />
+
+        </div>
+        <div class="row">
+            <label class="col-lg-8" for="cpf_cliente">CPF</label>
+            <input class="col-lg-8" type="text" name="cpf_cliente" />
+        </div>
+        <div class="row">
+            <label class="col-lg-8" for="telefone_cliente">Telefone</label>
+            <input type="text" class="phone col-lg-8" name="telefone_cliente" />
+        </div>
+        <div class="row">
+            <label class="col-lg-8" for="cep_cliente">CEP</label>
+            <input class="col-lg-8" name="cep_cliente" />
+        </div>
+        <div class="row">
+            <label class="col-lg-8" for="data_nasciment_clientes">Data de Nascimento</label>
+            <input class="col-lg-8" type="date" name="data_nasciment_clientes" />
+        </div>
+        <div class="row">
+            <label class="col-lg-8" for="email_cliente">E-mail</label>
+            <input class="col-lg-8" type="email" name="email_cliente" />
+        </div>
+        <div class="row">
+            <label class="col-lg-8" for="senha_cliente">Senha</label>
+            <input class="col-lg-8 " type="password" name="senha_cliente" />
+
+        </div>
+
+        <div class="row">
+            <button class="btn-primary col-lg-4" style="margin:15px" type="submit">Enviar</button>
+            
+            
+        </div>
+
     </form>
 
 </div>

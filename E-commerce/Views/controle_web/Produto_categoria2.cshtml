@@ -1,33 +1,53 @@
-﻿
+﻿@model List<E_commerce.Models.Produtos>
+
 @{
     ViewBag.Title = "Produto";
 
 }
 
 
+
+
 <link href="~/css/produto.css" rel="stylesheet" type="text/css" />
 
-<div class="text-center "><img class=" imagem_produto1 " src="~/Imagem/produtos/evoluçao.jpg"/></div>
+<div class="text-center "><img class=" imagem_produto1 " src="~/Imagem/produtos/evoluçao.jpg" /></div>
 
-@for (int num = 1; num < 3; num++) {
-            String produto = "capinha0" + num +".jpeg";
 
-    
-        <div class="row container_produto" >
+@if (Model != null)
+{
 
-            <div class="centr_produto  col-lg-4">
-                <img class="produto_compra " src="~/Imagem/produtos/acessorios_celular/@produto" />
-            </div>
-            <div class="col-lg-6  centr_produto">
-                <p class="text_desc_produto">
-                    Atualmente, atendemos todos as cidades pelo brasil todo, entregando suas compras
-                    com praticidade e segurança, seguindo todas orientações das organizações de saúde no
-                    combate à Covid-19.
-                </p>
-            </div>
-        </div>
-    
+    foreach (E_commerce.Models.Produtos produto in Model)
+    {
+        if (produto.Categoria == 1)
+        {
+            continue;
+        }
+
+        String imagem_convert = "data:imagem/jpeg; base64, " + produto.Img_convert;
+
+
+<div class="row container_produto btn-outline-secondary" style="border-radius:20px;color:black;">
+
+    <div class="centr_produto  col-lg-4">
+        <img class="produto_compra " src="@imagem_convert" />
+    </div>
+    <div class="col-lg-7  centr_produto">
+        <p class="text_desc_produto">
+            R$:@produto.Preco
+        </p>
+        <p class="text_desc_produto">
+            @produto.Descricao
+        </p>
+
+        <button class="btn btn-primary" style="min-width:60px;width:25%;font-size:14px;margin:10px">Comprar</button>
+        <button class="btn btn-primary" style="min-width:80px;width:30%;font-size:14px;margin:10px">Add Carrinho</button>
+
+    </div>
+</div>
+    }
+
 }
+
 
 
 

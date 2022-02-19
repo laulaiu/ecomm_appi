@@ -1,0 +1,171 @@
+﻿@model List<E_commerce.Models.Produtos>
+
+@{
+    ViewBag.Title = "Carrinho";
+
+
+}
+
+@TempData["msg_produto_add"]
+@TempData["msg_get_id_bd"]
+@TempData["msg_imagem_add"]
+@TempData["msg_tamanho_foto"]
+
+
+
+
+@ViewBag.msg_get_id_bd
+@ViewBag.msg_imagem_add
+@ViewBag.msg_tamanho_foto
+
+
+<h2 style="text-align:center">Pagina ADM</h2>
+<a class="btn btn-primary" style=" min-width:100px;width:20%;height:auto;margin-bottom:20px" href="~/controle_web/Adm">Atualizar</a>
+
+<link href="~/css/produto.css" rel="stylesheet" type="text/css" />
+
+
+@if (Model != null)
+{
+    foreach (E_commerce.Models.Produtos produto in Model)
+    {
+
+        String imagem_convert = "data:imagem/jpeg; base64, " + produto.Img_convert;
+
+        <div class="row container_produto">
+
+            <div class="centr_produto  col-lg-4">
+                <img class="produto_compra " src="@imagem_convert" />
+            </div>
+            <div class="centr_produto" style="margin:10px; font-size:16px;">
+                <p>ID:@produto.Id   </p>
+                <p>Nome:@produto.Nome   </p>
+                <p>Preço:@produto.Preco  </p>
+                <p>Quantidade:@produto.Quantidade</p>
+                <p>Categoria:@produto.Categoria</p>
+                <p>Decricao: @produto.Descricao</p>
+
+            </div>
+            <div class="col-lg-6  centr_produto">
+
+                <p><a class="btn btn-danger" href="~/controle_web/excluir_produto/@produto.Id">Excluir</a></p>
+            </div>
+            <p>
+                <hr />
+            </p>
+        </div>
+
+
+    }
+}
+            
+
+    <style>
+        .botao_adicionar_adm {
+            background-color: dodgerblue;
+            color: white;
+            width: 150px;
+            height: auto;
+            font-size: 18px;
+        }
+
+        .tela_transparent {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0,0,0,.7);
+        }
+
+        .tela_add {
+            width: 50%;
+            height: auto;
+            background-color: grey;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .container_adm div {
+            margin: 20px;
+            margin-left: 30px;
+            font-size: 16px;
+            font-family: 'Times New Roman';
+        }
+    </style>
+
+    <div class="tela_transparent" id="form_adm" hidden>
+        <div class="tela_add">
+
+            <form class="container container_adm" enctype="multipart/form-data" method="post" action="~/controle_web/Adm">
+
+                <div class="row">
+                    <label class="col-md-4" for="nome_produto">*nome do produto</label>
+                    <input class="col-md-6" required  maxlength="15" type="text" name="nome_produto" />
+                </div>
+
+                <div class="row">
+                    <label class="col-md-4" for="preco_produto">*Preço do produto</label>
+                    <input class="col-md-6" required type="text" name="preco_produto" />
+                </div>
+
+                <div class="row">
+                    <label class="col-md-4" for="quantidade_produto">*quantidade de produto</label>
+                    <input class="col-md-6" required type="number" name="quantidade_produto" />
+                </div>
+
+                <div class="row">
+                    <label class="col-md-4" for="descricao_produto">*Descrição do produto</label>
+                    <input class="col-md-6" required maxlength="99" type="text" name="descricao_produto" />
+                </div>
+
+                <div class="row">
+                    <label class="col-md-4" for="categoria_produto">*Categoria do produto </label>                    
+                    <input class="col-md-1" type="radio" required name="categoria_produto" value="1"/>
+                    <input class="col-md-1" type="radio" required name="categoria_produto" value="2"/>
+                </div>
+
+                <div class="row">
+                    <label class="col-md-4">*Imagem OBS:Até 2mb</label>
+                    <input class="col-md-8" type="file" required name="imagem_produto">
+                </div>
+
+                <div>
+                    <button class="col-md-4 btn-primary" type="submit" onclick="ocultar_add_adm()">Enviar</button>
+                    <div class="col-md-1"></div>
+
+                    <button class="col-md-4 btn-primary" type="reset" onclick="ocultar_add_adm()">Cancelar</button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div>
+            <button class=" btn-outline-primary botao_adicionar_adm" onclick="mostrar_add_adm()">Adicionar</button>
+        </div>
+    </div>
+
+
+    <script>
+
+    function apaga_msg() {
+        window.alert("111111");
+        @TempData["msg_produto_add"] = "";
+        @TempData["msg_get_id_bd"] = "";
+        @TempData["msg_imagem_add"] = "";
+        @TempData["msg_tamanho_foto"] = "";
+
+    };
+
+    apaga_msg();
+
+    </script>
+

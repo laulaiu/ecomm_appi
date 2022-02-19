@@ -3,11 +3,13 @@
     ViewBag.Title = "Login";
 }
 
+@TempData["msg_login"]
 
+@ViewBag.msg_login
 
 
 <div class="container container_login">
-    <form class="form_margin">
+    <form class="form_margin" id="form_login" method="post"  action="~/controle_web/Login_dados">
 
         <div class="row margin_bottom">
             <label class="col-sm-8">Acesse com seu e-mail e senha</label>
@@ -16,17 +18,17 @@
         <div class="margin_bottom">
             <!--Entrada email-->
             <div class="row">
-                <input class=" limite_resposivo_input_email" type="email" required placeholder="Digite seu e-mail">
+                <input class=" limite_resposivo_input_email" type="email" name="email" required placeholder="Digite seu e-mail">
             </div>
         </div>
 
 
-        <div class="margin_bottom " id="ocultar">
+        <div class="margin_bottom " id="ocultar" hidden>
 
-            <div id="row senha">
+            <div id="row senha" >
                 <!--Entrada senha-->
                 <div class="row">
-                    <input class="  limite_resposivo_input_senha" maxlength="16" minlength="8" id="senha_usuario" required type="password" placeholder="Digite sua senha ">
+                    <input class="limite_resposivo_input_senha" maxlength="16"  disabled name="senha" minlength="8" id="senha_usuario"  required type="password" placeholder="Digite sua senha ">
                 </div>
 
                 <div class="row">
@@ -35,23 +37,19 @@
             </div>
         </div>
 
-
-
-
         <div class="margin_bottom">
             <div class="row">
                 <label class="col-lg-10">Já possui um cadastro ?</label>
             </div>
 
-
             <!--radio button-->
             <div class="row">
                 <div class="min-width ">
-                    <input type="radio" name="grupo1" id="radio1" onclick="mostrar_login()" checked>
+                    <input type="radio" name="grupo1" id="radio1" value="1" onclick="mostrar_login()"  >
                     <label for="group1">Sim</label>
                 </div>
                 <div class="min-width">
-                    <input type="radio" name="grupo1" id="radio2" onclick="ocultar_login()">
+                    <input type="radio" name="grupo1" id="radio2" value="2" onclick="ocultar_login()" checked >
                     <label for="group1">Minha primeira vez</label>
                 </div>
             </div>
@@ -59,9 +57,8 @@
 
 
 
-
         <div class="row" id="div_botao_login">
-            <button class=" col-lg-4  btn-primary btn_enviar_form" onclick="verificaRadio()">Continuar</button>
+            <button type="submit" class=" col-lg-4  btn-primary btn_enviar_form"  onclick="verifica()">Continuar</button>
         </div>
 
 

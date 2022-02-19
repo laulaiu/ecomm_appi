@@ -3,19 +3,21 @@ function mostrar_login() {
 
     
     document.getElementById("ocultar").hidden = false;
-    document.getElementById("div_pr").style.height = "480px";
+
+    document.getElementById("senha_usuario").disabled = false;
+
+    
 
 }
 
 function ocultar_login() {
+
     
+    document.getElementById("senha_usuario").disabled = true;
     document.getElementById("ocultar").hidden = true;
-    document.getElementById("div_pr").style.height = "400px";
-}
+    
+    
+    
+}   
 
-/*FIM-login*/
-
-/*Cadastro*/
-
-
-/*FIM-Cadastro*/
+/*document.getElementById("ocultar").hidden = true;*/
